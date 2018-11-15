@@ -12,7 +12,12 @@
 
 ## 2.1 基本指令
 
+
 ## 2.2 替换指令
+
+### 2.2.1. 表达式解析
+
+### 2.2.2. 替换模板表达
 
 ## 2.3 树指令
 
@@ -83,3 +88,9 @@ rptemplate.process()
 processor.save('out5.xlsx')
 ```
 # 4.扩展方法
+
+## 4.1. 表达式扩展
+
+## 4.2. 指令扩展
+
+## 4.3. ExcelProcessor扩展（openpyxl、xlwings、xlutils等）
