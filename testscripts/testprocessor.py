@@ -66,3 +66,24 @@ class DivTest(unittest.TestCase):
         rptemplate.process()
         processor.save('out5.xlsx')
         pass
+
+    def test_div_004(self):
+        processor = OpenpyXlExcelProcessor('xlstemplates/template4.xlsx', 'Sheet1')
+        evaluator = PyEvaluator()
+        embeddedEvaluator = EmbeddedPyEvaluator(evaluator)
+        context = DictExcelTemplateContext({
+            "students":[
+                {'name':'s1', 'age':12, 'class':'2-A' ,'grade':'A-'},
+                {'name':'s2', 'age':13, 'class':'2-B' ,'grade':'B-'},
+                {'name':'s3', 'age':14, 'class':'2-C' ,'grade':'C-'},
+                {'name':'s4', 'age':15, 'class':'2-D' ,'grade':'E-'},
+                {'name':'s5', 'age':16, 'class':'2-E' ,'grade':'F-'},
+                {'name':'s6', 'age':17, 'class':'2-F' ,'grade':'A+'},
+            ]
+        })
+        archtemplate = TreeTemplate(processor, context, evaluator)
+        rptemplate = ExcelRelpaceTemplate(processor, context, embeddedEvaluator)
+        archtemplate.process()
+        rptemplate.process()
+        processor.save('out6.xlsx')
+        pass
