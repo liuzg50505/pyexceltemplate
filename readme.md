@@ -8,11 +8,19 @@
 
 ![fsfdsfsdf](doc/fig.png)
 
+# 2.基本概念
 
+## 2.1 基本指令
 
-# 2. 使用方法
+## 2.2 替换指令
 
-## 2.1 列表绑定
+## 2.3 树指令
+
+### 2.3.1 循环与上下文
+
+# 3. 使用方法
+
+## 3.1 列表绑定
 
 可以按照testcase4中的代码这样，准备一个上下文dict，然后设置一个key='students'
 students里面是一个对象数组，每个元素表示一个学生的信息。
@@ -42,7 +50,7 @@ students里面是一个对象数组，每个元素表示一个学生的信息。
 ![image](https://user-images.githubusercontent.com/18006949/48540964-70fc9380-e8f6-11e8-9cdd-967362b6338b.png)
 
 
-## 2.2 树绑定
+## 3.2 树绑定
 ```python
 from wysiwygtemplate.treetemplate import *
 from wysiwygtemplate.openpyprocessor import *
@@ -74,3 +82,4 @@ rptemplate.process()
 # 保存输出文件
 processor.save('out5.xlsx')
 ```
+# 4.扩展方法
